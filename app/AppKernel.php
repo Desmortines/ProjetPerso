@@ -26,6 +26,10 @@ class AppKernel extends Kernel
 
             // And finally
             new Sonata\AdminBundle\SonataAdminBundle(),
+=======
+            new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
+            new AppBundle\AppBundle(),
+>>>>>>> master
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

@@ -69,6 +69,7 @@ swiftmailer:
 sensio_framework_extra:
    router:
         annotations: false
+<<<<<<< HEAD
 
 
 sonata_block:
@@ -76,3 +77,5 @@ sonata_block:
     # enable the SonataAdminBundle block
     sonata.admin.block.admin_list:
       contexts: [admin]
+=======
+>>>>>>> master

@@ -4,7 +4,11 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
+<<<<<<< HEAD
     "content-hash": "893c0820957e43ef127466cbeee74578",
+=======
+    "content-hash": "fc679d24820d9a4be0c5c5584a1a0833",
+>>>>>>> master
     "packages": [
         {
             "name": "cocur/slugify",
@@ -1674,6 +1678,7 @@
         },
         {
             "name": "sensio/framework-extra-bundle",
+<<<<<<< HEAD
             "version": "v5.2.1",
             "source": {
                 "type": "git",
@@ -1684,6 +1689,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/sensiolabs/SensioFrameworkExtraBundle/zipball/535b56b7b0325e87b15b9c57bd3631ae2a0b9f16",
                 "reference": "535b56b7b0325e87b15b9c57bd3631ae2a0b9f16",
+=======
+            "version": "v5.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sensiolabs/SensioFrameworkExtraBundle.git",
+                "reference": "50e8b7292425957b8fd66887504430c89bcbd83c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sensiolabs/SensioFrameworkExtraBundle/zipball/50e8b7292425957b8fd66887504430c89bcbd83c",
+                "reference": "50e8b7292425957b8fd66887504430c89bcbd83c",
+>>>>>>> master
                 "shasum": ""
             },
             "require": {
@@ -1741,7 +1758,11 @@
                 "annotations",
                 "controllers"
             ],
+<<<<<<< HEAD
             "time": "2018-09-30T05:16:57+00:00"
+=======
+            "time": "2018-05-12T09:37:42+00:00"
+>>>>>>> master
         },
         {
             "name": "sensiolabs/security-checker",
@@ -2177,6 +2198,7 @@
             "time": "2017-12-12T17:04:29+00:00"
         },
         {
+<<<<<<< HEAD
             "name": "sonata-project/doctrine-orm-admin-bundle",
             "version": "3.6.2",
             "source": {
@@ -2261,6 +2283,8 @@
             "time": "2018-10-01T17:08:16+00:00"
         },
         {
+=======
+>>>>>>> master
             "name": "sonata-project/exporter",
             "version": "1.9.1",
             "source": {
@@ -3299,6 +3323,7 @@
         },
         {
             "name": "symfony/phpunit-bridge",
+<<<<<<< HEAD
             "version": "v3.4.16",
             "source": {
                 "type": "git",
@@ -3309,6 +3334,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/phpunit-bridge/zipball/4f2bbc1a84681e0dc59ee69d57d8dd32163f4eb0",
                 "reference": "4f2bbc1a84681e0dc59ee69d57d8dd32163f4eb0",
+=======
+            "version": "v3.4.15",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/phpunit-bridge.git",
+                "reference": "f4fde1ede82c7ca2a4f06cf48521a185b26c0fed"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/phpunit-bridge/zipball/f4fde1ede82c7ca2a4f06cf48521a185b26c0fed",
+                "reference": "f4fde1ede82c7ca2a4f06cf48521a185b26c0fed",
+>>>>>>> master
                 "shasum": ""
             },
             "require": {
@@ -3361,7 +3398,11 @@
             ],
             "description": "Symfony PHPUnit Bridge",
             "homepage": "https://symfony.com",
+<<<<<<< HEAD
             "time": "2018-09-21T12:47:54+00:00"
+=======
+            "time": "2018-08-27T15:17:06+00:00"
+>>>>>>> master
         }
     ],
     "aliases": [],
