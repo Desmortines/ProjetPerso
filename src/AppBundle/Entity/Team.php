@@ -21,6 +21,27 @@ class Team
      */
     private $id;
 
+    /**
+     * @var string
+     */
+    private $title;
+
+    /**
+     * @var string
+     */
+    private $image;
+
+    /**
+     * @var string
+     *
+     */
+    private $description;
+
+    /**
+     * @var string
+     */
+    private $region;
+
 
     /**
      * Get id

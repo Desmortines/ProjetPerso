@@ -88,4 +88,5 @@ class UserAdmin extends AbstractAdmin
             ->add('id')
         ;
     }
+
 }

@@ -3,6 +3,7 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\VarDumper\Cloner\Data;
 
 /**
  * Comment
@@ -21,6 +22,20 @@ class Comment
      */
     private $id;
 
+    /**
+     * @var string
+     */
+    private $name;
+
+    /**
+     * @var Data
+     */
+    private $date;
+
+    /**
+     * @var string
+     */
+    private $comment;
 
     /**
      * Get id

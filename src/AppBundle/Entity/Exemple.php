@@ -21,6 +21,16 @@ class Exemple
      */
     private $id;
 
+    /**
+     * @var string
+     */
+    private $lane;
+
+    /**
+     * @
+     *
+     */
+    private $champ;
 
     /**
      * Get id

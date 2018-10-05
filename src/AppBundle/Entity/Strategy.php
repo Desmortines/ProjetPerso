@@ -21,6 +21,20 @@ class Strategy
      */
     private $id;
 
+    /**
+     * @var
+     */
+    private $season;
+
+    /**
+     * @var string
+     */
+    private $name;
+
+    /**
+     * @var
+     */
+    private $strategycontent;
 
     /**
      * Get id

@@ -21,6 +21,36 @@ class Strategy_Content
      */
     private $id;
 
+    /**
+     * @var string
+     */
+    private $description;
+
+    /**
+     * @var
+     */
+    private $exemple;
+
+    /**
+     * @var string
+     */
+    private $counterstrat;
+
+    /**
+     * @var string
+     *
+     */
+    private $settings;
+
+    /**
+     * @var
+     */
+    private $teams;
+
+    /**
+     * @var
+     */
+    private $comments;
 
     /**
      * Get id

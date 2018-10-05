@@ -3,6 +3,7 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\HttpFoundation\Tests\StringableObject;
 
 /**
  * Champ
@@ -21,6 +22,22 @@ class Champ
      */
     private $id;
 
+    /**
+     * @var string
+     */
+    private $name;
+
+
+    /**
+     * @var string
+     */
+    private $image;
+
+    /**
+     * @var string
+     *
+     */
+    private $type;
 
     /**
      * Get id

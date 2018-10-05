@@ -21,6 +21,12 @@ class Season
      */
     private $id;
 
+    /**
+     * @var string
+     *
+     */
+    private $name;
+
 
     /**
      * Get id
