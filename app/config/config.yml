@@ -69,7 +69,6 @@ swiftmailer:
 sensio_framework_extra:
    router:
         annotations: false
-<<<<<<< HEAD
 
 
 sonata_block:
@@ -77,5 +76,18 @@ sonata_block:
     # enable the SonataAdminBundle block
     sonata.admin.block.admin_list:
       contexts: [admin]
-=======
->>>>>>> master
+
+# FOS USERConfiguration
+
+fos_user:
+    db_driver: orm # other valid values are 'mongodb' and 'couchdb'
+    firewall_name: main
+    user_class: AppBundle\Entity\User
+    service:
+        mailer: fos_user.mailer.twig_swift
+    from_email:
+        address: "%mailer_user%"
+        sender_name: "%mailer_user%"
+    registration:
+        confirmation:
+            enabled: true

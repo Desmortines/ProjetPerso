@@ -1,0 +1,28 @@
+services:
+    app.admin.strategy:
+        class: AppBundle\Admin\StrategyAdmin
+        arguments: [~, AppBundle\Entity\Strategy, SonataAdminBundle:CRUD]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: admin, label: Strategy }
+        public: true
+
+    app.admin.comment:
+        class: AppBundle\Admin\CommentAdmin
+        arguments: [~, AppBundle\Entity\Comment, SonataAdminBundle:CRUD]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: admin, label: Comment }
+        public: true
+
+    app.admin.season:
+        class: AppBundle\Admin\SeasonAdmin
+        arguments: [~, AppBundle\Entity\Season, SonataAdminBundle:CRUD]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: admin, label: Season }
+        public: true
+
+    app.admin.user:
+        class: AppBundle\Admin\UserAdmin
+        arguments: [~, AppBundle\Entity\User, SonataAdminBundle:CRUD]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: admin, label: User }
+        public: true
