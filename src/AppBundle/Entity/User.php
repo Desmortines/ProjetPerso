@@ -22,24 +22,117 @@ class User extends BaseUser
     protected $id;
 
     /**
-     * @var string
+     * @var name
+     *
+     * @ORM\Column(name="name", type="string")
      */
     private $name;
 
     /**
-     * @var string
+     * @var authorisation
+     *
+     * @ORM\Column(name="authorisation", type="string")
      */
     private $authorisation;
 
+
     /**
-     * @var string
+     * @var Comment
+     *
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Comment", mappedBy="user")
      */
-    private $password;
+    private $comments;
+
+    /**
+     * User constructor.
+     */
 
     public function __construct()
     {
         parent::__construct();
         // your own logic
     }
-}
 
+
+    /**
+     * Set name
+     *
+     * @param string $name
+     *
+     * @return User
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * Get name
+     *
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * Set authorisation
+     *
+     * @param string $authorisation
+     *
+     * @return User
+     */
+    public function setAuthorisation($authorisation)
+    {
+        $this->authorisation = $authorisation;
+
+        return $this;
+    }
+
+    /**
+     * Get authorisation
+     *
+     * @return string
+     */
+    public function getAuthorisation()
+    {
+        return $this->authorisation;
+    }
+
+    /**
+     * Add comment
+     *
+     * @param \AppBundle\Entity\Comment $comment
+     *
+     * @return User
+     */
+    public function addComment(\AppBundle\Entity\Comment $comment)
+    {
+        $this->comments[] = $comment;
+
+        return $this;
+    }
+
+    /**
+     * Remove comment
+     *
+     * @param \AppBundle\Entity\Comment $comment
+     */
+    public function removeComment(\AppBundle\Entity\Comment $comment)
+    {
+        $this->comments->removeElement($comment);
+    }
+
+    /**
+     * Get comments
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getComments()
+    {
+        return $this->comments;
+    }
+}

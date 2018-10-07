@@ -25,6 +25,8 @@ class UserAdmin extends AbstractAdmin
             ->add('passwordRequestedAt')
             ->add('roles')
             ->add('id')
+            ->add('name')
+            ->add('authorisation')
         ;
     }
 
@@ -43,6 +45,8 @@ class UserAdmin extends AbstractAdmin
             ->add('passwordRequestedAt')
             ->add('roles')
             ->add('id')
+            ->add('name')
+            ->add('authorisation')
             ->add('_action', null, [
                 'actions' => [
                     'show' => [],
@@ -68,6 +72,8 @@ class UserAdmin extends AbstractAdmin
             ->add('passwordRequestedAt')
             ->add('roles')
             ->add('id')
+            ->add('name')
+            ->add('authorisation')
         ;
     }
 
@@ -86,7 +92,8 @@ class UserAdmin extends AbstractAdmin
             ->add('passwordRequestedAt')
             ->add('roles')
             ->add('id')
+            ->add('name')
+            ->add('authorisation')
         ;
     }
-
 }

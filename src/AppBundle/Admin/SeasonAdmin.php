@@ -14,6 +14,7 @@ class SeasonAdmin extends AbstractAdmin
     {
         $datagridMapper
             ->add('id')
+            ->add('name')
         ;
     }
 
@@ -21,6 +22,7 @@ class SeasonAdmin extends AbstractAdmin
     {
         $listMapper
             ->add('id')
+            ->add('name')
             ->add('_action', null, [
                 'actions' => [
                     'show' => [],
@@ -35,6 +37,7 @@ class SeasonAdmin extends AbstractAdmin
     {
         $formMapper
             ->add('id')
+            ->add('name')
         ;
     }
 
@@ -42,6 +45,7 @@ class SeasonAdmin extends AbstractAdmin
     {
         $showMapper
             ->add('id')
+            ->add('name')
         ;
     }
 }

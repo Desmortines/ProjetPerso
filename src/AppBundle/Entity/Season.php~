@@ -1,0 +1,39 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Season
+ *
+ * @ORM\Table(name="season")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\SeasonRepository")
+ */
+class Season
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var name
+     *
+     * @ORM\Column(name="name", type="string")
+     */
+    private $name;
+
+    /**
+     * @var Strategy
+     *
+     * @ORM\ManyToMany(targetEntity="AppBundle\Entity\Strategy", mappedBy="season")
+     */
+    private $Strategy;
+
+
+}

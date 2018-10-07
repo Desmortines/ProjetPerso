@@ -8,14 +8,13 @@ use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Show\ShowMapper;
 
-class StrategyAdmin extends AbstractAdmin
+class ExempleAdmin extends AbstractAdmin
 {
     protected function configureDatagridFilters(DatagridMapper $datagridMapper)
     {
         $datagridMapper
             ->add('id')
-            ->add('name')
-            ->add('isgimmick')
+            ->add('lane')
         ;
     }
 
@@ -23,8 +22,7 @@ class StrategyAdmin extends AbstractAdmin
     {
         $listMapper
             ->add('id')
-            ->add('name')
-            ->add('isgimmick')
+            ->add('lane')
             ->add('_action', null, [
                 'actions' => [
                     'show' => [],
@@ -39,8 +37,7 @@ class StrategyAdmin extends AbstractAdmin
     {
         $formMapper
             ->add('id')
-            ->add('name')
-            ->add('isgimmick')
+            ->add('lane')
         ;
     }
 
@@ -48,8 +45,7 @@ class StrategyAdmin extends AbstractAdmin
     {
         $showMapper
             ->add('id')
-            ->add('name')
-            ->add('isgimmick')
+            ->add('lane')
         ;
     }
 }

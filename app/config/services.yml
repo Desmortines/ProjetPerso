@@ -35,11 +35,11 @@ services:
     #         $someArgument: 'some_value'
 
 
-services:
+ ##services:
     # ...
-    admin.category:
-        class: App\Admin\CategoryAdmin
-        arguments: [~, App\Entity\Category, ~]
-        tags:
-        - { name: sonata.admin, manager_type: orm, label: Category }
-        public: true
+   ## admin.category:
+     ##   class: App\Admin\StrategyAdmin
+       # arguments: [~, App\Entity\Category, ~]
+        ##tags:
+        ##- { name: sonata.admin, manager_type: orm, label: Strategy }
+        ##public: true

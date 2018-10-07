@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div id="content_strategy">
+        <title id="strategy_name">{#}Strategy.name }#} </title>
+        <p id="description">
+            {#}{ Strategy_Content.description }#}
+        </p>
+        <div id="exemple">
+            <title id="exmple">An Exemple Teamcomp for This Strategie to work :</title>
+            <!--
+            Exemple de teamcomp ici
+
+            for exemple in exemples
+            -->
+        </div>
+        <div id="makeitwork">
+            <title id="howtomake">How to make this strategy work : </title>
+            {#{ Strategy_Content.settings }#}
+        </div>
+        <div id="contre">
+            <title id="Counter">How to counter this strategy : </title>
+            {#{ Strategy_Content.counterstrat }#}
+        </div>
+        <div id="teamusage">
+            <title id="teamsthatuseit">Teams that use this strategy often :</title>
+            <!--
+            Afficher le logo des teams utilisant cette strat souvent
+            -->
+        </div>
+        <div id="comments">
+            <title id="commentary">Comments</title>
+            {#{ Strategy_Content.comments }#}
+            <!--
+            formulaire pour ajouter un commentaire
+            -->
+        </div>
+    </div>
+{% endblock %}

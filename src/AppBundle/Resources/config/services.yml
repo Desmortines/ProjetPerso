@@ -26,3 +26,31 @@ services:
         tags:
             - { name: sonata.admin, manager_type: orm, group: admin, label: User }
         public: true
+
+    app.admin.strategy.content:
+        class: AppBundle\Admin\Strategy_ContentAdmin
+        arguments: [~, AppBundle\Entity\Strategy_Content, Sonata\AdminBundle\Controller\CRUDController]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: admin, label: Strategy_Content }
+        public: true
+
+    app.admin.champ:
+        class: AppBundle\Admin\ChampAdmin
+        arguments: [~, AppBundle\Entity\Champ, Sonata\AdminBundle\Controller\CRUDController]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: admin, label: Champ }
+        public: true
+
+    app.admin.exemple:
+        class: AppBundle\Admin\ExempleAdmin
+        arguments: [~, AppBundle\Entity\Exemple, Sonata\AdminBundle\Controller\CRUDController]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: admin, label: Exemple }
+        public: true
+
+    app.admin.team:
+        class: AppBundle\Admin\TeamAdmin
+        arguments: [~, AppBundle\Entity\Team, Sonata\AdminBundle\Controller\CRUDController]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: admin, label: Team }
+        public: true

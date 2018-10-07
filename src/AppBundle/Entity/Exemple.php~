@@ -1,0 +1,46 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Exemple
+ *
+ * @ORM\Table(name="exemple")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\ExempleRepository")
+ */
+class Exemple
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var lane
+     *
+     * @ORM\Column(name="lane", type="string")
+     */
+    private $lane;
+
+    /**
+     * @var Champ
+     *
+     *@ORM\ManyToOne(targetEntity="AppBundle\Entity\Champ", inversedBy="exemple")
+     */
+    private $champs;
+
+    /**
+     * @var Strategy_Content
+     *
+     * @ORM\OneToOne(targetEntity="AppBundle\Entity\Strategy_Content", inversedBy="exemples")
+     */
+    private $strategy_content;
+
+
+}
