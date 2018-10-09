@@ -2,11 +2,14 @@
 
 namespace AppBundle\Admin;
 
+use AppBundle\Entity\Strategy_Content;
 use Sonata\AdminBundle\Admin\AbstractAdmin;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Form\FormMapper;
+use Sonata\AdminBundle\Form\Type\ModelType;
 use Sonata\AdminBundle\Show\ShowMapper;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 
 class StrategyAdmin extends AbstractAdmin
 {
@@ -14,6 +17,8 @@ class StrategyAdmin extends AbstractAdmin
     {
         $datagridMapper
             ->add('id')
+            ->add('name')
+            ->add('isgimmick')
         ;
     }
 
@@ -21,6 +26,8 @@ class StrategyAdmin extends AbstractAdmin
     {
         $listMapper
             ->add('id')
+            ->add('name')
+            ->add('isgimmick')
             ->add('_action', null, [
                 'actions' => [
                     'show' => [],
@@ -34,7 +41,12 @@ class StrategyAdmin extends AbstractAdmin
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
-            ->add('id')
+            ->add('name')
+            ->add('isgimmick')
+            ->add("strategycontent", ModelType::class, [
+                'class' => Strategy_Content::class,
+                'property' => 'description',
+            ])
         ;
     }
 
@@ -42,6 +54,8 @@ class StrategyAdmin extends AbstractAdmin
     {
         $showMapper
             ->add('id')
+            ->add('name')
+            ->add('isgimmick')
         ;
     }
 }

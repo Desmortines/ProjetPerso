@@ -1,0 +1,55 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\HttpFoundation\Tests\StringableObject;
+
+/**
+ * Champ
+ *
+ * @ORM\Table(name="champ")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\ChampRepository")
+ */
+class Champ
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var name
+     *
+     * @ORM\Column(name="name", type="string")
+     */
+    private $name;
+
+
+    /**
+     * @var image
+     *
+     * @ORM\Column(name="image", type="text")
+     */
+    private $image;
+
+    /**
+     * @var type
+     *
+     * @ORM\Column(name="type", type="string")
+     */
+    private $type;
+
+    /**
+     * @var Exemple
+     *
+     *@ORM\OneToMany(targetEntity="AppBundle\Entity\Exemple",mappedBy="champs")
+     */
+    private $exemple;
+
+
+}

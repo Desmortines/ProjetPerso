@@ -1,0 +1,74 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Strategy_Content
+ *
+ * @ORM\Table(name="strategy__content")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\Strategy_ContentRepository")
+ */
+class Strategy_Content
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var description
+     *
+     * @ORM\Column(name="description", type="string")
+     */
+    private $description;
+
+    /**
+     * @var Exemple
+     *
+     * @ORM\OneToOne(targetEntity="AppBundle\Entity\Exemple", mappedBy="strategy_content")
+     */
+    private $exemples;
+
+    /**
+     * @var counterstrat
+     *
+     * @ORM\Column(name="counterstrat", type="string")
+     */
+    private $counterstrat;
+
+    /**
+     * @var settings
+     *
+     * @ORM\Column(name="settings", type="string")
+     */
+    private $settings;
+
+    /**
+     * @var Team
+     *
+     * @ORM\ManyToMany(targetEntity="AppBundle\Entity\Team", inversedBy="strategy_content")
+     */
+    private $teams;
+
+    /**
+     * @var Strategy
+     *
+     * @ORM\OneToOne(targetEntity="AppBundle\Entity\Strategy", inversedBy="strategycontent")
+     */
+    private $strategy;
+
+    /**
+     * @var Comment
+     *
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Comment", mappedBy="strategy_content")
+     */
+    private $comments;
+
+
+}

@@ -2,19 +2,23 @@
 
 namespace AppBundle\Admin;
 
+use AppBundle\Entity\Exemple;
 use Sonata\AdminBundle\Admin\AbstractAdmin;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Form\FormMapper;
+use Sonata\AdminBundle\Form\Type\ModelType;
 use Sonata\AdminBundle\Show\ShowMapper;
 
-class SeasonAdmin extends AbstractAdmin
+class Strategy_ContentAdmin extends AbstractAdmin
 {
     protected function configureDatagridFilters(DatagridMapper $datagridMapper)
     {
         $datagridMapper
             ->add('id')
-            ->add('name')
+            ->add('description')
+            ->add('counterstrat')
+            ->add('settings')
         ;
     }
 
@@ -22,7 +26,9 @@ class SeasonAdmin extends AbstractAdmin
     {
         $listMapper
             ->add('id')
-            ->add('name')
+            ->add('description')
+            ->add('counterstrat')
+            ->add('settings')
             ->add('_action', null, [
                 'actions' => [
                     'show' => [],
@@ -36,7 +42,14 @@ class SeasonAdmin extends AbstractAdmin
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
-            ->add('name')
+            ->add('description')
+            ->add('counterstrat')
+            ->add('settings')
+            ->add('exemples',ModelType::class, [
+                'class' => Exemple::class,
+                'property' => 'name',
+                'multiple' => 5,
+                    ])
         ;
     }
 
@@ -44,7 +57,9 @@ class SeasonAdmin extends AbstractAdmin
     {
         $showMapper
             ->add('id')
-            ->add('name')
+            ->add('description')
+            ->add('counterstrat')
+            ->add('settings')
         ;
     }
 }

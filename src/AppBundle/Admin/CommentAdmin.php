@@ -14,6 +14,9 @@ class CommentAdmin extends AbstractAdmin
     {
         $datagridMapper
             ->add('id')
+            ->add('name')
+            ->add('date')
+            ->add('comment')
         ;
     }
 
@@ -21,6 +24,9 @@ class CommentAdmin extends AbstractAdmin
     {
         $listMapper
             ->add('id')
+            ->add('name')
+            ->add('date')
+            ->add('comment')
             ->add('_action', null, [
                 'actions' => [
                     'show' => [],
@@ -34,7 +40,9 @@ class CommentAdmin extends AbstractAdmin
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
-            ->add('id')
+            ->add('name')
+            ->add('date')
+            ->add('comment')
         ;
     }
 
@@ -42,6 +50,9 @@ class CommentAdmin extends AbstractAdmin
     {
         $showMapper
             ->add('id')
+            ->add('name')
+            ->add('date')
+            ->add('comment')
         ;
     }
 }

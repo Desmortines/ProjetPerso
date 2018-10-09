@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div id="content_strategies">
+        <div id="principal_strat">
+            <p id="principalthroughout">
+                Principal Strategies throughout the seasons
+            </p>
+            <a href="">
+                <img src="{{ asset('assets/img/Down-Arrow-PNG.png') }}" width="26px;" height="auto;">
+            </a>
+            <hr id="line">
+            <!--
+
+            Affichage des strats avec ce qu'il y a en base de données
+
+            -->
+        </div>
+        <div id="stratinseasons">
+            <p id="specificseasons">
+                Principal Strategies in specific seasons
+            </p>
+            <a href="">
+                <img src="{{ asset('assets/img/Down-Arrow-PNG.png') }}" width="26px;" height="auto;">
+            </a>
+            <hr id="line">
+            <!--
+
+            Affichage des strats en fonctions des saisons
+            -->
+            <a href="">
+                More Seasons
+            </a>
+        </div>
+        <div id="gimmickstrats">
+            <p id="gimmickstrat">
+                Gimmick Strategies
+            </p>
+            <a href="">
+                <img src="{{ asset('assets/img/Down-Arrow-PNG.png') }}" width="26px;" height="auto;">
+            </a>
+            <hr id="line">
+            <!--
+
+            Affichage d'une strat Gimmick
+            -->
+            <a href="">
+                More gimmicks
+            </a>
+        </div>
+    </div>
+{% endblock %}
+{% block stylesheets %}
+    {{ parents() }}
+{%  endblock %}

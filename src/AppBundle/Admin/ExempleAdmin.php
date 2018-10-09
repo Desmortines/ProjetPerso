@@ -2,19 +2,21 @@
 
 namespace AppBundle\Admin;
 
+use AppBundle\Entity\Champ;
 use Sonata\AdminBundle\Admin\AbstractAdmin;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Form\FormMapper;
+use Sonata\AdminBundle\Form\Type\ModelType;
 use Sonata\AdminBundle\Show\ShowMapper;
 
-class SeasonAdmin extends AbstractAdmin
+class ExempleAdmin extends AbstractAdmin
 {
     protected function configureDatagridFilters(DatagridMapper $datagridMapper)
     {
         $datagridMapper
             ->add('id')
-            ->add('name')
+            ->add('lane')
         ;
     }
 
@@ -22,7 +24,11 @@ class SeasonAdmin extends AbstractAdmin
     {
         $listMapper
             ->add('id')
-            ->add('name')
+            ->add('lane')
+            ->add('champs',
+                null, [
+                    'associated_property' => 'name'
+                ])
             ->add('_action', null, [
                 'actions' => [
                     'show' => [],
@@ -36,7 +42,11 @@ class SeasonAdmin extends AbstractAdmin
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
-            ->add('name')
+            ->add('lane')
+            ->add('champs',ModelType::class, [
+                'class' => Champ::class,
+                'property' => 'name',
+            ])
         ;
     }
 
@@ -44,7 +54,11 @@ class SeasonAdmin extends AbstractAdmin
     {
         $showMapper
             ->add('id')
-            ->add('name')
+            ->add('lane')
+            ->add('champs',
+                null, [
+                    'associated_property' => 'name'
+                ])
         ;
     }
 }

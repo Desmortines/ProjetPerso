@@ -8,13 +8,15 @@ use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Show\ShowMapper;
 
-class SeasonAdmin extends AbstractAdmin
+class ChampAdmin extends AbstractAdmin
 {
     protected function configureDatagridFilters(DatagridMapper $datagridMapper)
     {
         $datagridMapper
             ->add('id')
             ->add('name')
+            ->add('image')
+            ->add('type')
         ;
     }
 
@@ -23,6 +25,8 @@ class SeasonAdmin extends AbstractAdmin
         $listMapper
             ->add('id')
             ->add('name')
+            ->add('image')
+            ->add('type')
             ->add('_action', null, [
                 'actions' => [
                     'show' => [],
@@ -37,6 +41,8 @@ class SeasonAdmin extends AbstractAdmin
     {
         $formMapper
             ->add('name')
+            ->add('image')
+            ->add('type')
         ;
     }
 
@@ -45,6 +51,8 @@ class SeasonAdmin extends AbstractAdmin
         $showMapper
             ->add('id')
             ->add('name')
+            ->add('image')
+            ->add('type')
         ;
     }
 }
