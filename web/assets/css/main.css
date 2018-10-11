@@ -62,7 +62,7 @@ h2 {/*
     min-height:100vh;
     font-family: BeaufortforLOL;
     src: url(Beaufort-Bold.ttf);
-    font-size: 30px!veryimportant;
+    font-size: 30px !important;
     text-decoration-color: #A25628;
     text-shadow: 3px 5px 10px black;
 }
