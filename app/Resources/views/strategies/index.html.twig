@@ -1,55 +1,81 @@
 {% extends 'base.html.twig' %}
-
+{% block stylesheet %}
+    {{ parent() }}
+{% endblock %}
 {% block body %}
-    <div id="content_strategies">
-        <div id="principal_strat">
-            <p id="principalthroughout">
+    <div class="content_strategies">
+        <div class="principal_strat">
+            <p class="principalthroughout">
                 Principal Strategies throughout the seasons
             </p>
-            <a href="">
+            <a href="" class="arrow-expand">
                 <img src="{{ asset('assets/img/Down-Arrow-PNG.png') }}" width="26px;" height="auto;">
             </a>
-            <hr id="line">
-            <!--
-
-            Affichage des strats avec ce qu'il y a en base de données
-
-            -->
+            <hr class="line">
+            {% for strategy in strategys %}
+                <div class="name">
+                    <a href="{{ path('strategy_show', {'id':strategy.id}) }}">
+                        <p> {{ strategy.name }}</p>
+                    </a>
+                    <a href="{{ path('strategy_show', {'id':strategy.id}) }}" class="expandstrategy">
+                        <img src="{{ asset('assets/img/Down-Arrow-PNG.png') }}" width="26px;" height="auto;">
+                    </a>
+                </div>
+            {% endfor %}
         </div>
-        <div id="stratinseasons">
-            <p id="specificseasons">
+        <div class="stratinseasons">
+            <p class="specificseasons">
                 Principal Strategies in specific seasons
             </p>
-            <a href="">
+            <a href="" class="arrow-expand">
                 <img src="{{ asset('assets/img/Down-Arrow-PNG.png') }}" width="26px;" height="auto;">
             </a>
-            <hr id="line">
-            <!--
-
-            Affichage des strats en fonctions des saisons
-            -->
+            <hr class="line">
+            {% for strategy in strategys %}
+                <div class="season_name">
+                    {% for season in strategy.seasons %}
+                        <h1 class="seasonname">Season {{ season.name }}</h1>
+                        <div class="name">
+                            <a href="{{ path('strategy_show', {'id':strategy.id}) }}">
+                                <p> {{ strategy.name }}</p>
+                            </a>
+                        </div>
+                        <a href="{{ path('strategy_show', {'id':strategy.id}) }}" class="expandstrategyseason">
+                            <img src="{{ asset('assets/img/Down-Arrow-PNG.png') }}" width="26px;" height="auto;">
+                        </a>
+                    {% else %}
+                        <div>No season</div>
+                    {%  endfor %}
+                </div>
+            {% endfor %}
             <a href="">
                 More Seasons
             </a>
         </div>
-        <div id="gimmickstrats">
-            <p id="gimmickstrat">
+        <div class="gimmickstrats">
+            <p class="gimmickstrat">
                 Gimmick Strategies
             </p>
-            <a href="">
+            <a href="" class="arrow-expand">
                 <img src="{{ asset('assets/img/Down-Arrow-PNG.png') }}" width="26px;" height="auto;">
             </a>
-            <hr id="line">
-            <!--
-
-            Affichage d'une strat Gimmick
-            -->
+            <hr class="line">
+            {% for isgimmick,strategy in strategys %}
+                {% if isgimmick == true %}
+                    <div class="gimmickstrat">
+                        <a href="{{ path('strategy_show', {'id':strategy.id}) }}">
+                            <h1 class="gimmick_name">{{ strategy.name }}</h1>
+                        </a>
+                            <p class="gimmickdescription">{{ strategy_content.description }}</p>
+                        <a href="" class="expandgimmickseason">
+                            <img src="{{ asset('assets/img/Down-Arrow-PNG.png') }}" width="26px;" height="auto;">
+                        </a>
+                    </div>
+                {% endif %}
+            {% endfor %}
             <a href="">
                 More gimmicks
             </a>
         </div>
     </div>
 {% endblock %}
-{% block stylesheets %}
-    {{ parents() }}
-{%  endblock %}

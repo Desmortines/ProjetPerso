@@ -24,7 +24,7 @@ class Strategy
     /**
      * @var Season
      *
-     * @ORM\ManyToMany(targetEntity="AppBundle\Entity\Season", inversedBy="Strategy")
+     * @ORM\ManyToMany(targetEntity="AppBundle\Entity\Season", inversedBy="Strategy", cascade={"persist"})
      */
     private $season;
 
@@ -45,7 +45,7 @@ class Strategy
     /**
      * @var Strategy_Content
      *
-     * @ORM\OneToOne(targetEntity="AppBundle\Entity\Strategy_Content", mappedBy="strategy")
+     * @ORM\OneToOne(targetEntity="AppBundle\Entity\Strategy_Content", mappedBy="strategy", cascade={"persist"})
      */
     private $strategycontent;
 
@@ -65,6 +65,14 @@ class Strategy
     public function __construct()
     {
         $this->season = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+
+
+
+    public function getseasons()
+    {
+        return $this->getSeason();
     }
 
 

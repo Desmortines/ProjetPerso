@@ -1,0 +1,70 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="content_teams">
+        <div class="LCK_container">
+            <p> LCK </p>
+            <div class="LCK_content">
+                {% for region in team %}
+                    {% if region == 'LCK' %}
+                        <div class="team">
+                            {{ team.image }}
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="LPL_container">
+            <p> LPL </p>
+            <div class="LPL_content">
+                {% for region in team %}
+                {% if region == LCPL %}
+                <div class="team">
+                    {{ team.image }}
+                </div>
+            </div>
+        </div>
+
+        <div class="LCSEU_container">
+            <p> LCSEU </p>
+            <div class="LCSEU_content">
+                {% for region in team %}
+                    {% if region == 'LCSEU' %}
+                        <div class="team">
+                            {{ team.image }}
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="LCSNA_container">
+            <p> LCSNA </p>
+            <div class="LCSNA_content">
+                {% for region in team %}
+                    {% if region == 'LCSNA' %}
+                        <div class="team">
+                            {{ team.image }}
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="OtherRegion_container">
+            <p> Other Regions </p>
+            <div class="OtherRegion_content">
+                {% for region in team %}
+                    {% if region == 'OtherRegion'%}
+                        <div class="team">
+                            {{ team.image }}
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+
+    </div>
+
+{% endblock %}

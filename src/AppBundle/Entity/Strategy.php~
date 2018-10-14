@@ -24,7 +24,7 @@ class Strategy
     /**
      * @var Season
      *
-     * @ORM\ManyToMany(targetEntity="AppBundle\Entity\Season", inversedBy="Strategy")
+     * @ORM\ManyToMany(targetEntity="AppBundle\Entity\Season", inversedBy="Strategy", cascade={"persist"})
      */
     private $season;
 
@@ -45,7 +45,7 @@ class Strategy
     /**
      * @var Strategy_Content
      *
-     * @ORM\OneToOne(targetEntity="AppBundle\Entity\Strategy_Content", mappedBy="strategy")
+     * @ORM\OneToOne(targetEntity="AppBundle\Entity\Strategy_Content", mappedBy="strategy", cascade={"persist"})
      */
     private $strategycontent;
 
@@ -68,109 +68,11 @@ class Strategy
     }
 
 
-    /**
-     * Set name
-     *
-     * @param string $name
-     *
-     * @return Strategy
-     */
-    public function setName($name)
-    {
-        $this->name = $name;
 
-        return $this;
+
+    public function getseasons()
+    {
+        return $this->getSeason();
     }
 
-    /**
-     * Get name
-     *
-     * @return string
-     */
-    public function getName()
-    {
-        return $this->name;
-    }
-
-    /**
-     * Set isgimmick
-     *
-     * @param boolean $isgimmick
-     *
-     * @return Strategy
-     */
-    public function setIsgimmick($isgimmick)
-    {
-        $this->isgimmick = $isgimmick;
-
-        return $this;
-    }
-
-    /**
-     * Get isgimmick
-     *
-     * @return boolean
-     */
-    public function getIsgimmick()
-    {
-        return $this->isgimmick;
-    }
-
-    /**
-     * Add season
-     *
-     * @param \AppBundle\Entity\Season $season
-     *
-     * @return Strategy
-     */
-    public function addSeason(\AppBundle\Entity\Season $season)
-    {
-        $this->season[] = $season;
-
-        return $this;
-    }
-
-    /**
-     * Remove season
-     *
-     * @param \AppBundle\Entity\Season $season
-     */
-    public function removeSeason(\AppBundle\Entity\Season $season)
-    {
-        $this->season->removeElement($season);
-    }
-
-    /**
-     * Get season
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getSeason()
-    {
-        return $this->season;
-    }
-
-    /**
-     * Set strategycontent
-     *
-     * @param \AppBundle\Entity\Strategy_Content $strategycontent
-     *
-     * @return Strategy
-     */
-    public function setStrategycontent(\AppBundle\Entity\Strategy_Content $strategycontent = null)
-    {
-        $this->strategycontent = $strategycontent;
-
-        return $this;
-    }
-
-    /**
-     * Get strategycontent
-     *
-     * @return \AppBundle\Entity\Strategy_Content
-     */
-    public function getStrategycontent()
-    {
-        return $this->strategycontent;
-    }
 }

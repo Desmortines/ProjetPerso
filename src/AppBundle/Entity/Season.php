@@ -31,7 +31,7 @@ class Season
     /**
      * @var Strategy
      *
-     * @ORM\ManyToMany(targetEntity="AppBundle\Entity\Strategy", mappedBy="season")
+     * @ORM\ManyToMany(targetEntity="AppBundle\Entity\Strategy", mappedBy="season", cascade={"persist"})
      */
     private $Strategy;
 

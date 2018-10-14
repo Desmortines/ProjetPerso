@@ -1,39 +1,55 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <div id="content_strategy">
-        <title id="strategy_name">{#}Strategy.name }#} </title>
-        <p id="description">
-            {#}{ Strategy_Content.description }#}
+    <div class="content_strategy">
+        <h1 class="strategy_name">{{ strategy.name }} </h1>
+        <p class="description">
+            {{ strategy.strategyContent.description }}
         </p>
-        <div id="exemple">
-            <title id="exmple">An Exemple Teamcomp for This Strategie to work :</title>
-            <!--
-            Exemple de teamcomp ici
-
-            for exemple in exemples
-            -->
+       <div class="exemple">
+            <h1 class="exmple">An Exemple Teamcomp for This Strategie to work :</h1>
+                {%  for exemple in strategy.strategyContent.exemples %}
+                    {% if exemple.lane == 'Toplane' %}
+                        <img src="{{ asset('assets/img/champ/'~exemple.champs.name~'.png') }}" class="champs_image">
+                    {% endif %}
+                    {% if exemple.lane == 'Jungler' %}
+                        <img src="{{ asset('assets/img/champ/'~exemple.champs.name~'.png') }}" class="champs_image">
+                    {% endif %}
+                    {% if exemple.lane == 'Midlane' %}
+                        <img src="{{ asset('assets/img/champ/'~exemple.champs.name~'.png') }}" class="champs_image">
+                    {% endif %}
+                    {% if exemple.lane == 'Botlaner' %}
+                        <img src="{{ asset('assets/img/champ/'~exemple.champs.name~'.png') }}" class="champs_image">
+                    {% endif %}
+                    {% if exemple.lane == 'Support' %}
+                        <img src="{{ asset('assets/img/champ/'~exemple.champs.name~'.png') }}" class="champs_image">
+                    {% endif %}
+                {% endfor %}
         </div>
-        <div id="makeitwork">
-            <title id="howtomake">How to make this strategy work : </title>
-            {#{ Strategy_Content.settings }#}
+        <div class="makeitwork">
+            <h1 class="howtomake">How to make this strategy work : </h1>
+            <p class="settings">
+                {{ strategy.strategyContent.settings }}
+            </p>
         </div>
-        <div id="contre">
-            <title id="Counter">How to counter this strategy : </title>
-            {#{ Strategy_Content.counterstrat }#}
+        <div class="contre">
+            <h1 class="Counter">How to counter this strategy : </h1>
+            <p class="counterstrat">
+                {{ strategy.strategyContent.counterstrat }}
+            </p>
         </div>
-        <div id="teamusage">
-            <title id="teamsthatuseit">Teams that use this strategy often :</title>
+        <div class="teamusage">
+            <h1 class="teamsthatuseit">Teams that use this strategy often :</h1>
             <!--
             Afficher le logo des teams utilisant cette strat souvent
-            -->
-        </div>
-        <div id="comments">
-            <title id="commentary">Comments</title>
+
+        </div><!--
+        <div class="comments">
+            <h1 class="commentary">Comments</h1>
             {#{ Strategy_Content.comments }#}
-            <!--
+
             formulaire pour ajouter un commentaire
-            -->
-        </div>
+
+        </div>-->
     </div>
 {% endblock %}

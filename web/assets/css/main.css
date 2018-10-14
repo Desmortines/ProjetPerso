@@ -3,19 +3,18 @@ body {
     src: url(Beaufort-Bold.ttf);
     height: 100%;
     color: #A25628;
-   /* background-repeat: no-repeat;*/
-   /* background-attachment: fixed;*/
 }
 
-h1 {/*
-    font-family: 'Raleway', sans-serif;
-    color: #604310;*/
+h1 {
+    font-family: BeaufortforLOL;
+    src: url(Beaufort-Bold.ttf);
+    color: #A25628;
 }
 
-h2 {/*
-    font-family: 'Raleway', sans-serif;
-    color: #604310;
-    padding-top: 0.5em;*/
+h2 {
+    font-family: BeaufortforLOL;
+    src: url(Beaufort-Bold.ttf);
+    color: #A25628;
 }
 
 .header {
@@ -104,18 +103,125 @@ h2 {/*
 .satishraj-tree-container .tree-li [type="checkbox"] + label {
     padding-left: 25px !important;
 }
+/************************** Strategies*************************************/
 
-/**********************************************************************/
+.content_strategies {
+    background:#00386D;
+    border:6px solid #E6B155;
+    box-shadow: 0 5px 10px black;
+    height: 3000px;
+    width: 1470px;
+    margin-left: 400px;
+}
 
-/**************************** PRINCIPAL NAV ****************************/
+.principal_strat, .stratinseasons, .gimmickstrats {
+    background:#00386D;
+    border:3px solid #E6B155;
+    box-shadow: 0px 5px 10px black;
+    height: 763px;
+    width: 1350px;
+    margin-left: 50px;
+    margin-top: 63px;
+    margin-bottom: 63px;
+}
 
 
-/****** Search Zone ******/
+.line {
+    width: 1280px;
+    border: 3px solid #E6B155;
+    box-shadow: 3px 5px 10px black;
+}
 
 
+.name, .principalthroughout, .specificseasons, .gimmickstrat  {
+    font-size: 45px;
+    text-shadow: 0px 5px 10px black;
+}
+/*************************************************************************/
+/*******************************Strategy***********************************/
 
+.content_strategy {
+    background:#00386D;
+    border:6px solid #E6B155;
+    box-shadow: 0 5px 10px black;
+    height: 4050px;
+    width: 1470px;
+    margin-left: 400px;
+}
 
-/****** End of Buttons ******/
-/**************************** END OF PRINCIPAL NAV ****************************/
+.strategy_name {
+    font-family: BeaufortforLOL;
+    src: url(Beaufort-Bold.ttf);
+    color: #A25628;
+    font-size: 75px;
+    text-align: center;
+    text-shadow: 3px 5px 10px black;
+    text-decoration: underline;
+}
 
-/**************************** MINI NAV ****************************/
+.description, .settings, .counterstrat {
+    font-family: BeaufortforLOL;
+    src: url(Beaufort-Bold.ttf);
+    color: #A25628;
+    font-size: 40px;
+    text-align: left;
+    text-shadow: 3px 5px 10px black;
+}
+
+.exemple, .makeitwork, .contre, .teamusage {
+    background:#00386D;
+    border:6px solid #E6B155;
+    box-shadow: 0 5px 10px black;
+    height: 515px;
+    width: 1355px;
+    margin-left: 38px;
+    margin-top: 64px;
+    margin-bottom: 64px;
+}
+
+.exmple {
+    font-family: BeaufortforLOL;
+    src: url(Beaufort-Bold.ttf);
+    color: #A25628;
+    font-size: 55px;
+    text-align: left;
+    text-shadow: 3px 5px 10px black;
+    text-decoration: underline;
+}
+
+.howtomake {
+    font-family: BeaufortforLOL;
+    src: url(Beaufort-Bold.ttf);
+    color: #A25628;
+    font-size: 55px;
+    text-align: left;
+    text-shadow: 3px 5px 10px black;
+    text-decoration: underline;
+}
+
+.Counter {
+    font-family: BeaufortforLOL;
+    src: url(Beaufort-Bold.ttf);
+    color: #A25628;
+    font-size: 55px;
+    text-align: left;
+    text-shadow: 3px 5px 10px black;
+    text-decoration: underline;
+}
+
+.teamsthatuseit {
+    font-family: BeaufortforLOL;
+    src: url(Beaufort-Bold.ttf);
+    color: #A25628;
+    font-size: 55px;
+    text-align: left;
+    text-shadow: 3px 5px 10px black;
+    text-decoration: underline;
+}
+
+.champs_image {
+    margin-top: 188px;
+    margin-left: 46px;
+    margin-right: 46px;
+}
+/*************************************************************************/

@@ -24,28 +24,28 @@ class Strategy_Content
     /**
      * @var description
      *
-     * @ORM\Column(name="description", type="string")
+     * @ORM\Column(name="description", type="text")
      */
     private $description;
 
     /**
      * @var Exemple
      *
-     * @ORM\OneToOne(targetEntity="AppBundle\Entity\Exemple", mappedBy="strategy_content")
+     * @ORM\ManyToMany(targetEntity="AppBundle\Entity\Exemple", mappedBy="strategy_content", cascade={"persist"})
      */
     private $exemples;
 
     /**
      * @var counterstrat
      *
-     * @ORM\Column(name="counterstrat", type="string")
+     * @ORM\Column(name="counterstrat", type="text")
      */
     private $counterstrat;
 
     /**
      * @var settings
      *
-     * @ORM\Column(name="settings", type="string")
+     * @ORM\Column(name="settings", type="text")
      */
     private $settings;
 
@@ -169,7 +169,7 @@ class Strategy_Content
      *
      * @return Strategy_Content
      */
-    public function setExemples(\AppBundle\Entity\Exemple $exemples = null)
+    public function setExemples(\AppBundle\Entity\Exemple $exemples )
     {
         $this->exemples = $exemples;
 
@@ -276,5 +276,29 @@ class Strategy_Content
     public function getComments()
     {
         return $this->comments;
+    }
+
+    /**
+     * Add exemple
+     *
+     * @param \AppBundle\Entity\Exemple $exemple
+     *
+     * @return Strategy_Content
+     */
+    public function addExemple(\AppBundle\Entity\Exemple $exemple)
+    {
+        $this->exemples[] = $exemple;
+
+        return $this;
+    }
+
+    /**
+     * Remove exemple
+     *
+     * @param \AppBundle\Entity\Exemple $exemple
+     */
+    public function removeExemple(\AppBundle\Entity\Exemple $exemple)
+    {
+        $this->exemples->removeElement($exemple);
     }
 }

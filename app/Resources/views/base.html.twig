@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8"/>
-    <title>{% block title %}Strategy{% endblock %}</title>
+    <title>{% block title %}Home{% endblock %}</title>
     {% block stylesheet  %}
         <link rel="stylesheet" href="{{ asset('assets/css/reset.css') }}" type="text/css"/>
         <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}" type="text/css"/>
@@ -16,7 +16,6 @@
     {% endblock %}
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
 </head>
-<body style="background-color: #00386D ">
 {% block header %}
     <div class="d-flex justify-content-end header">
         {% if app.user %}
@@ -88,8 +87,10 @@
     </div>
 </nav>-->
 {% endblock %}
-</body>
+<body style="background-color: #00386D ">
+
 {% block body %}{% endblock %}
+</body>
         {% block javascripts %}
             <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
             <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>

@@ -38,7 +38,7 @@ class Exemple
     /**
      * @var Strategy_Content
      *
-     * @ORM\OneToOne(targetEntity="AppBundle\Entity\Strategy_Content", inversedBy="exemples")
+     * @ORM\ManyToMany(targetEntity="AppBundle\Entity\Strategy_Content", inversedBy="exemples", cascade={"persist"})
      */
     private $strategy_content;
 
@@ -134,5 +134,36 @@ class Exemple
     public function getName()
     {
         return $this->getLane() . " : " . $this->getChamps()->getName();
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->strategy_content = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add strategyContent
+     *
+     * @param \AppBundle\Entity\Strategy_Content $strategyContent
+     *
+     * @return Exemple
+     */
+    public function addStrategyContent(\AppBundle\Entity\Strategy_Content $strategyContent)
+    {
+        $this->strategy_content[] = $strategyContent;
+
+        return $this;
+    }
+
+    /**
+     * Remove strategyContent
+     *
+     * @param \AppBundle\Entity\Strategy_Content $strategyContent
+     */
+    public function removeStrategyContent(\AppBundle\Entity\Strategy_Content $strategyContent)
+    {
+        $this->strategy_content->removeElement($strategyContent);
     }
 }

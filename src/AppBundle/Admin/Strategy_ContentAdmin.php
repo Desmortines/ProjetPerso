@@ -3,6 +3,7 @@
 namespace AppBundle\Admin;
 
 use AppBundle\Entity\Exemple;
+use AppBundle\Entity\Season;
 use Sonata\AdminBundle\Admin\AbstractAdmin;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Datagrid\ListMapper;
@@ -48,7 +49,7 @@ class Strategy_ContentAdmin extends AbstractAdmin
             ->add('exemples',ModelType::class, [
                 'class' => Exemple::class,
                 'property' => 'name',
-                'multiple' => 5,
+                'multiple' => true,
                     ])
         ;
     }

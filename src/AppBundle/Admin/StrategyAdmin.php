@@ -2,6 +2,7 @@
 
 namespace AppBundle\Admin;
 
+use AppBundle\Entity\Season;
 use AppBundle\Entity\Strategy_Content;
 use Sonata\AdminBundle\Admin\AbstractAdmin;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
@@ -28,6 +29,7 @@ class StrategyAdmin extends AbstractAdmin
             ->add('id')
             ->add('name')
             ->add('isgimmick')
+            ->add('season')
             ->add('_action', null, [
                 'actions' => [
                     'show' => [],
@@ -46,6 +48,11 @@ class StrategyAdmin extends AbstractAdmin
             ->add("strategycontent", ModelType::class, [
                 'class' => Strategy_Content::class,
                 'property' => 'description',
+            ])
+            ->add('season', ModelType::class, [
+                'class' => Season::class,
+                'property' => 'name',
+                'multiple' => true,
             ])
         ;
     }

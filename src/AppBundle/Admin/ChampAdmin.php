@@ -7,6 +7,7 @@ use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Show\ShowMapper;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 
 class ChampAdmin extends AbstractAdmin
 {
@@ -41,7 +42,7 @@ class ChampAdmin extends AbstractAdmin
     {
         $formMapper
             ->add('name')
-            ->add('image')
+            ->add('image', FileType::class)
             ->add('type')
         ;
     }
