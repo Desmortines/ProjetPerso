@@ -17,6 +17,6 @@ class DefaultController extends Controller
         //return $this->render('default/index.html.twig', [
         //    'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
         //]);
-        return $this->redirectToRoute('strategies');
+        return $this->redirectToRoute('strategies_index');
     }
 }

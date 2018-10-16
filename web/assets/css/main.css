@@ -18,6 +18,8 @@ h2 {
 }
 
 .header {
+    position: fixed;
+    z-index: 1000;
     background:#001D49;
     border-bottom:3px solid;
     border-color: #A25628;
@@ -43,12 +45,13 @@ h2 {
 }
 
 .sidebar {
+    position: fixed;
     background:#001D49;
-    width: 280px;
+    width: 250px;
     border-color: #A25628;
     border-right:3px solid;;
     box-shadow: 0px 5px 10px black;
-    z-index: 32;
+    z-index: 1001;
 }
 
 /******************************* HEADER *******************************/
@@ -61,7 +64,7 @@ h2 {
     min-height:100vh;
     font-family: BeaufortforLOL;
     src: url(Beaufort-Bold.ttf);
-    font-size: 30px !important;
+    font-size: 25px !important;
     text-decoration-color: #A25628;
     text-shadow: 3px 5px 10px black;
 }
@@ -107,34 +110,36 @@ h2 {
 
 .content_strategies {
     background:#00386D;
-    border:6px solid #E6B155;
+    border: 2px solid #E6B155;
     box-shadow: 0 5px 10px black;
-    height: 3000px;
+    height: 4050px;
     width: 1470px;
-    margin-left: 400px;
+    margin-left: 325px;
+    margin-top: 175px;
 }
 
 .principal_strat, .stratinseasons, .gimmickstrats {
-    background:#00386D;
-    border:3px solid #E6B155;
-    box-shadow: 0px 5px 10px black;
-    height: 763px;
-    width: 1350px;
-    margin-left: 50px;
-    margin-top: 63px;
-    margin-bottom: 63px;
+    font-family: BeaufortforLOL;
+    src: url(Beaufort-Bold.ttf);
+    color: #A25628;
+    font-size: 25px;
+    text-align: left;
+    text-shadow: 3px 5px 10px black;
+    margin-left: 20px;
+    margin-right: 10px;
+    margin-top: 10px;
 }
 
 
 .line {
-    width: 1280px;
-    border: 3px solid #E6B155;
+    width: 90%;
+    border: 2px solid #E6B155;
     box-shadow: 3px 5px 10px black;
 }
 
 
 .name, .principalthroughout, .specificseasons, .gimmickstrat  {
-    font-size: 45px;
+    font-size: 40px;
     text-shadow: 0px 5px 10px black;
 }
 /*************************************************************************/
@@ -142,18 +147,19 @@ h2 {
 
 .content_strategy {
     background:#00386D;
-    border:6px solid #E6B155;
+    border: 2px solid #E6B155;
     box-shadow: 0 5px 10px black;
     height: 4050px;
     width: 1470px;
-    margin-left: 400px;
+    margin-left: 325px;
+    margin-top: 175px;
 }
 
 .strategy_name {
     font-family: BeaufortforLOL;
     src: url(Beaufort-Bold.ttf);
     color: #A25628;
-    font-size: 75px;
+    font-size: 50px;
     text-align: center;
     text-shadow: 3px 5px 10px black;
     text-decoration: underline;
@@ -163,17 +169,20 @@ h2 {
     font-family: BeaufortforLOL;
     src: url(Beaufort-Bold.ttf);
     color: #A25628;
-    font-size: 40px;
+    font-size: 25px;
     text-align: left;
     text-shadow: 3px 5px 10px black;
+    margin-left: 20px;
+    margin-right: 10px;
+    margin-top: 10px;
 }
 
 .exemple, .makeitwork, .contre, .teamusage {
     background:#00386D;
-    border:6px solid #E6B155;
+    border:2px solid #E6B155;
     box-shadow: 0 5px 10px black;
     height: 515px;
-    width: 1355px;
+    width: 95%;
     margin-left: 38px;
     margin-top: 64px;
     margin-bottom: 64px;
@@ -183,45 +192,49 @@ h2 {
     font-family: BeaufortforLOL;
     src: url(Beaufort-Bold.ttf);
     color: #A25628;
-    font-size: 55px;
+    font-size: 40px;
     text-align: left;
     text-shadow: 3px 5px 10px black;
     text-decoration: underline;
+    margin-left: 15px;
 }
 
 .howtomake {
     font-family: BeaufortforLOL;
     src: url(Beaufort-Bold.ttf);
     color: #A25628;
-    font-size: 55px;
+    font-size: 40px;
     text-align: left;
     text-shadow: 3px 5px 10px black;
     text-decoration: underline;
+    margin-left: 15px;
 }
 
 .Counter {
     font-family: BeaufortforLOL;
     src: url(Beaufort-Bold.ttf);
     color: #A25628;
-    font-size: 55px;
+    font-size: 40px;
     text-align: left;
     text-shadow: 3px 5px 10px black;
     text-decoration: underline;
+    margin-left: 15px;
 }
 
 .teamsthatuseit {
     font-family: BeaufortforLOL;
     src: url(Beaufort-Bold.ttf);
     color: #A25628;
-    font-size: 55px;
+    font-size: 40px;
     text-align: left;
     text-shadow: 3px 5px 10px black;
     text-decoration: underline;
+    margin-left: 15px;
 }
 
 .champs_image {
-    margin-top: 188px;
-    margin-left: 46px;
-    margin-right: 46px;
+    margin-top: 60px;
+    margin-left: 30px;
+    margin-right: 30px;
 }
 /*************************************************************************/
